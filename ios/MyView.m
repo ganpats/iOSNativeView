@@ -36,8 +36,9 @@
   UIViewController *parentVC = [self getParentViewController];
   if (parentVC == nil) return;
   
-  MyViewController *vc = [[MyViewController alloc] init];
-
+  UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
+  MyViewController *vc = [storyboard instantiateViewControllerWithIdentifier:@"MyViewController"];
+  
   [parentVC addChildViewController:vc];
   [self addSubview:vc.view];
   vc.view.frame = self.bounds;
