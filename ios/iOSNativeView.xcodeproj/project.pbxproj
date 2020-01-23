@@ -22,6 +22,7 @@
 		A440CEB7C5EB012EB591A4DB /* libPods-iOSNativeView-tvOSTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 930370A4E6EF744299BC4B64 /* libPods-iOSNativeView-tvOSTests.a */; };
 		D267E3D923D96CC0008FDF15 /* RNTMyViewManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D267E3D823D96CC0008FDF15 /* RNTMyViewManager.m */; };
 		D267E3DC23D96D92008FDF15 /* MyView.m in Sources */ = {isa = PBXBuildFile; fileRef = D267E3DA23D96D92008FDF15 /* MyView.m */; };
+		D267E3DF23D97C6D008FDF15 /* MyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D267E3DE23D97C6D008FDF15 /* MyViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +69,8 @@
 		D267E3D823D96CC0008FDF15 /* RNTMyViewManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RNTMyViewManager.m; sourceTree = "<group>"; };
 		D267E3DA23D96D92008FDF15 /* MyView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyView.m; sourceTree = "<group>"; };
 		D267E3DB23D96D92008FDF15 /* MyView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyView.h; sourceTree = "<group>"; };
+		D267E3DD23D97C6D008FDF15 /* MyViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyViewController.h; sourceTree = "<group>"; };
+		D267E3DE23D97C6D008FDF15 /* MyViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyViewController.m; sourceTree = "<group>"; };
 		D571BFF21541D1E265282A9A /* Pods-iOSNativeViewTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOSNativeViewTests.release.xcconfig"; path = "Target Support Files/Pods-iOSNativeViewTests/Pods-iOSNativeViewTests.release.xcconfig"; sourceTree = "<group>"; };
 		EC92A7072480E3F4B4D4E8EE /* Pods-iOSNativeView-tvOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOSNativeView-tvOSTests.release.xcconfig"; path = "Target Support Files/Pods-iOSNativeView-tvOSTests/Pods-iOSNativeView-tvOSTests.release.xcconfig"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
@@ -142,6 +145,8 @@
 				D267E3D823D96CC0008FDF15 /* RNTMyViewManager.m */,
 				D267E3DB23D96D92008FDF15 /* MyView.h */,
 				D267E3DA23D96D92008FDF15 /* MyView.m */,
+				D267E3DD23D97C6D008FDF15 /* MyViewController.h */,
+				D267E3DE23D97C6D008FDF15 /* MyViewController.m */,
 			);
 			name = iOSNativeView;
 			sourceTree = "<group>";
@@ -542,6 +547,7 @@
 				D267E3D923D96CC0008FDF15 /* RNTMyViewManager.m in Sources */,
 				13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */,
 				13B07FC11A68108700A75B9A /* main.m in Sources */,
+				D267E3DF23D97C6D008FDF15 /* MyViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

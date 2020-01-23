@@ -13,28 +13,47 @@
 }
 
 -(instancetype)initWithFrame:(CGRect)frame {
-  NSLog(@"MyView - initWithFrame");
   return [super initWithFrame:frame];
 }
 
 -(instancetype)initWithCoder:(NSCoder *)coder {
-  NSLog(@"MyView - initWithCoder");
   return [super initWithCoder:coder];
 }
 
 -(void)layoutSubviews {
   [super layoutSubviews];
   
-  if (btn == nil) {
-    btn = [[UIButton alloc] initWithFrame:CGRectMake(8, 100, 100, 100)];
-    [btn setTitle:@"Click Here" forState:UIControlStateNormal];
-    [btn addTarget:self action:@selector(buttonTapEvent:) forControlEvents:UIControlEventTouchUpInside];
-    [self addSubview:btn];
+  if (_myViewController == nil) {
+    // embed
+    [self embed];
+  } else {
+    // set frame
+    _myViewController.view.frame = self.bounds;
   }
 }
 
--(void)buttonTapEvent:(UIButton*)sender {
-  NSLog(@"Button Tapped");
+-(void)embed {
+  UIViewController *parentVC = [self getParentViewController];
+  if (parentVC == nil) return;
+  
+  MyViewController *vc = [[MyViewController alloc] init];
+
+  [parentVC addChildViewController:vc];
+  [self addSubview:vc.view];
+  vc.view.frame = self.bounds;
+  [vc didMoveToParentViewController:parentVC];
+  self.myViewController = vc;
+}
+
+-(UIViewController*)getParentViewController {
+  UIResponder *parentResponder = self;
+  while (parentResponder != nil) {
+    parentResponder = parentResponder.nextResponder;
+    if ([parentResponder isKindOfClass:[UIViewController class]]) {
+      return (UIViewController*)parentResponder;
+    }
+  }
+  return nil;
 }
 
 @end

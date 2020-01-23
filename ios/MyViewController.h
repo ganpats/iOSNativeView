@@ -1,5 +1,5 @@
 //
-//  MyView.h
+//  MyViewController.h
 //  iOSNativeView
 //
 //  Created by MacCatalina on 23/01/20.
@@ -7,13 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "MyViewController.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface MyView : UIView
-
-@property (weak, nullable) MyViewController *myViewController;
+@interface MyViewController : UIViewController
 
 @end
 
